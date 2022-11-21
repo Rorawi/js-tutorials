@@ -2,7 +2,17 @@ const button = document.querySelector("button")
 //console.log(button)
 
 button.addEventListener('click',()=> {
-    //alert("hello Winifred")
+    const motherDiv = document.querySelector('#motherDiv');
+
+    const element = document.createElement('h1')
+    const text = document.createTextNode('Notify me')
+    element.appendChild(text)
+    motherDiv.appendChild(element);
+    document.body.append(motherDiv);
+ 
+
+
+
     Notification.requestPermission().then(perm => {
        // alert(perm)
         if(perm === "granted") {
