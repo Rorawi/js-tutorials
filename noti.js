@@ -17,6 +17,7 @@ button.addEventListener('click',()=> {
                 tag: "Welcome tag"
             })
             console.log("clicked")
+            alert("notified")
 
             notification.addEventListener("error",(e)=> {
                 alert("error")
