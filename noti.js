@@ -8,7 +8,7 @@ button.addEventListener('click',()=> {
         if(perm === "granted") {
            const notification =  new Notification("I want to send a message to you.", {
                 body: Math.random(),
-                data: {hello :"world"},
+                //data: {hello :"world"},
                 icon:"google.jpg",
                 //The tag property comes in handy when you wanna overwrite something..eg. 
                 //with out the tag when you click on the  button it sends the notification the
@@ -16,6 +16,7 @@ button.addEventListener('click',()=> {
                 //Nb: the tag will not work if the item passed in is the same; the welcome something.
                 tag: "Welcome tag"
             })
+            console.log("clicked")
 
             notification.addEventListener("error",(e)=> {
                 alert("error")
@@ -36,3 +37,21 @@ document.addEventListener("visibilitychange",()=> {
     else {
         if(notify)notify.close()}
 })
+
+// const button = document.querySelector("button")
+// console.log(button)
+
+// button.addEventListener('click',()=> {
+//     //alert("hi")
+//     Notification.requestPermission().then(perm => {
+//         //alert(perm)
+
+//         if(perm === "granted") {
+//             new Notification("Hi there! I'm trying again", {
+//                 body: "Please work",
+//                 // requireInteraction: true
+//             })
+//             console.warn("Clicked")
+//         }
+//     })
+// })
